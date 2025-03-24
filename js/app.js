@@ -38,5 +38,5 @@ alunos.forEach(aluno => {
 })
 
 const alunoView = new AlunoView(document.querySelector('[data-table-alunos]'))
-const alunoController = new AlunoController(AlunoService, AlunoView)
+const alunoController = new AlunoController(alunoService, alunoView)
 
