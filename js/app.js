@@ -1,8 +1,8 @@
-import {MateriaModel} from './models/Materia.model.js'
-import { AlunoService } from './services/Aluno.service.js'
-import { MateriaService } from './services/Materia.service.js'
-import { AlunoView } from './views/Aluno.view.js'
-import { AlunoController } from './controllers/Aluno.controller.js'
+import { MateriaModel } from "./models/Materia.model.js"
+import { AlunoService } from "./services/Aluno.service.js"
+import { MateriaService } from "./services/Materia.service.js"
+import { AlunoView } from "./views/Aluno.view.js"
+import { AlunoController } from "./controllers/Aluno.controller.js"
 
 const materiaService = new MateriaService()
 let materias = materiaService.getAll()
@@ -27,9 +27,10 @@ document.querySelector('form').addEventListener('submit', function (event) {
 	alunoController.add({ nome })
 })
 
-document.querySelector('#search_name').addEventListener("input", function (e){let nome = this.value
+document.querySelector('#search_name').addEventListener('input', function (e) {
+	let nome = this.value
 	sessionStorage.setItem('search', nome)
-	if(nome.length > 2 || nome.length === 0) {
+	if (nome.length > 2 || nome.length === 0) {
 		alunoController.search(nome)
 	}
 })

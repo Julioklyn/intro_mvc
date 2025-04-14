@@ -1,5 +1,6 @@
- import { AlunoModel } from '../models/Aluno.model.js'
- export class AlunoService {
+import { AlunoModel } from '../models/Aluno.model.js'
+
+export class AlunoService {
 	constructor() {
 		this.alunos = []
 		this.updateListAlunosFromLocalStorage()
@@ -29,10 +30,11 @@
 	}
 
 	search(nome) {
-		return this.alunos.filter(aluno => 
+		return this.alunos.filter(aluno =>
 			aluno.nome
-			.toLowerCase()
-			.includes(nome.toLowerCase()))
+				.toLowerCase()
+				.includes(nome.toLowerCase())
+		)
 	}
 
 	updateLocalStorage() {
